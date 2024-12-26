@@ -34,3 +34,30 @@
     background-color: #101010;
     border-radius: 1em;
 }
+
+.linkIcon {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+
+    margin: 0px 2px;
+    border-radius: 1em;
+    background-color: #10101080;
+
+    display: flex;
+    gap: 10px;
+}
+
+.bibleInfo {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+
+    padding: 5px 10px;
+    background-color: #10101080;
+    border-bottom: 1px solid #E7E7E780;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
