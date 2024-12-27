@@ -15,6 +15,8 @@
     border-radius: 6px;
     border: 1px solid white;
 
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,34 +32,54 @@
     margin: .5em;
 
     font-size: .8em;
+    text-align: center;
 
     background-color: #101010;
     border-radius: 1em;
 }
 
-.linkIcon {
+.footer {
     position: absolute;
     bottom: 10px;
-    left: 15px;
-
-    margin: 0px 2px;
-    border-radius: 1em;
-    background-color: #10101080;
-
-    display: flex;
-    gap: 10px;
-}
-
-.bibleInfo {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
+    right: .5em;
+    left: .5em;
 
     padding: 5px 10px;
     background-color: #10101080;
     border-bottom: 1px solid #E7E7E780;
 
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.5em;
+}
+
+.linkIcon {
+    align-self: end;
+    display: flex;
+    gap: 10px;
+}
+
+.bibleInfo {
+    justify-self: end;
+    padding: 5px 10px;
+
     display: flex;
     flex-direction: column;
     align-items: end;
 }
+
+/* @media only screen and (max-width: 600px) {
+    .bibleInfo {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+    
+        padding: 5px 10px;
+        background-color: #10101080;
+        border-bottom: 1px solid #E7E7E780;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+} */

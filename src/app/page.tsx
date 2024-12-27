@@ -20,27 +20,29 @@ export default function Home() {
       </div>
     </div>
 
-    <div className={ style.linkIcon }>
-      <a href="https://github.com/FrankyRay" target="_blank">
-        <Image 
-          src="/icons/github-mark-white.svg"
-          width={ 20 }
-          height={ 20 }
-          alt="Github icon redirect into Github page"
-        />
-      </a>
-      <a href="https://twitter.com/frays_csui" target="_blank">
-        <Image 
-          src="/icons/x-twitter.svg"
-          width={ 20 }
-          height={ 20 }
-          alt="X (formerly Twitter) icon redirect into X page"
-        />
-      </a>
-    </div>
+    <div className={style.footer}>
+      <div className={ style.linkIcon }>
+        <a href="https://github.com/FrankyRay" target="_blank">
+          <Image 
+            src="/icons/github-mark-white.svg"
+            width={ 20 }
+            height={ 20 }
+            alt="Github icon redirect into Github page"
+          />
+        </a>
+        <a href="https://twitter.com/frays_csui" target="_blank">
+          <Image 
+            src="/icons/x-twitter.svg"
+            width={ 20 }
+            height={ 20 }
+            alt="X (formerly Twitter) icon redirect into X page"
+          />
+        </a>
+      </div>
 
-    <div className={ style.bibleInfo }>
-      <Bible />
+      <div className={ style.bibleInfo }>
+        <Bible />
+      </div>
     </div>
   </>;
 }
