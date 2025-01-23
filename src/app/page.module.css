@@ -1,5 +1,9 @@
 .mainHome {
     height: 100vh;
+    background-size: 80px 80px;
+    background-image:
+        linear-gradient(to right, #303030 1px, transparent 1px),
+        linear-gradient(to bottom, #303030 1px, transparent 1px);
 
     display: flex;
     flex-direction: column;
