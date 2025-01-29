@@ -12,4 +12,5 @@ export const lexendLight = Lexend({
 
 export const geistMono = Geist_Mono({
   weight: "500",
+  subsets: ["latin"],
 });
