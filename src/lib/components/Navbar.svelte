@@ -4,12 +4,13 @@
     </div>
 
     <div id="navbar-center">
-
+        <a class="link" href="/">Home</a>
+        <a class="link" href="/about">About</a>
     </div>
 
     <div id="navbar-right">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <a href="https://github.com/FrankyRay"><img class="logo" src="/logo/github.svg" alt="Github logo" /></a>
+        <a href="https://twitter.com/frays_csui"><img class="logo" src="/logo/twitter.svg" alt="Twitter logo" /></a>
     </div>
 </nav>
 
@@ -31,15 +32,23 @@
 
     #navbar-center {
         flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
     }
 
-    #navbar-right a {
+    .link {
         color: white;
         text-decoration: none;
     }
 
-    #navbar-right a:hover {
+    .link:hover {
         text-decoration: underline;
+    }
+
+    .logo {
+        height: 1em;
+        width: auto;
     }
 </style>
 
