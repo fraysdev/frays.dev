@@ -4,6 +4,9 @@
         <p>That's it to be honest :) | Page still under construction</p>
     </header>
 </main>
+<div class="joke">
+    <Joke />
+</div>
 
 <style>
     main {
@@ -34,10 +37,18 @@
         font-weight: 500;
         font-style: normal;
     }
+
+    .joke {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 <script lang="ts">
     import type { PageData } from './$types';
+    import Joke from '$lib/components/useless/Joke.svelte';
 
     let { data }: { data: PageData } = $props();
 </script>
