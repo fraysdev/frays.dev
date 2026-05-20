@@ -3,7 +3,7 @@
         <div id="logo-container">
             <img src="/fraysdev.svg" alt="frays.dev Website logo" />
         </div>
-        frays.dev
+        <code>frays.dev</code>
     </a>
 </div>
 

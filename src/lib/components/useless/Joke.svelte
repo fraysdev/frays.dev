@@ -7,7 +7,7 @@
         "<code>git push --force origin life</code>",
         "Java : Javascript == Car : Carpet",
         "Ruby on Rails? Rails on Ruby?",
-        "How to exit vim? Jerk it (:q)",
+        "How to exit vim?",
         "I use Arch Linux btw!",
         '<code>[] == ![] </code><code class="comment">// true</code>',
         "What's programmer favorite fruit? ('b' + 'a' + + 'a' + 'a').toLowerCase()",

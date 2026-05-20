@@ -16,9 +16,15 @@
 
 <style>
     :global(body) {
-        margin: 10vh;
+        margin: 10vh 10vw;
         background-color: #191724;
 
+        color: white;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+    :global(code) {
         color: white;
         font-family: "Input Mono", monospace;
         font-optical-sizing: auto;
