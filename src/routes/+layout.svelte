@@ -1,32 +1,45 @@
 <script lang="ts">
-    import type { Snippet } from "svelte";
-    import type { LayoutData } from "./$types";
-    import Navbar from "$lib/components/Navbar.svelte";
-    import "$lib/styles/fonts.css";
-
-    let { data, children }: { data: LayoutData; children: Snippet } = $props();
+    import "$lib/css/fonts.css";
+    import "$lib/css/app.css";
+    import Header from "$lib/components/Header.svelte";
+    import Footer from "$lib/components/Footer.svelte";
+	let { children } = $props();
 </script>
 
-<svelte:head>
-    <title>Home | frays.dev</title>
-    <link rel="shortcut icon" href="/fraysdev.svg" type="image/x-icon" />
-</svelte:head>
+<div class="page">
+    <Header />
 
-{@render children()}
+    <div class="content">
+        {@render children()}
+    </div>
+
+    <Footer />
+</div>
 
 <style>
-    :global(body) {
-        margin: 10vh 10vw;
-        background-color: #191724;
-
-        color: white;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
+    .page {
+        border: 1px solid var(--color-border);
+        background-color: var(--color-bg);
+        max-width: 960px;
+        margin: 16px auto;
     }
 
-    :global(code) {
-        color: white;
-        font-family: "Input Mono", monospace;
-        font-optical-sizing: auto;
+    .content {
+        padding: 8px;
+    }
+
+    :global(body) {
+        background-color: var(--color-bg);
+        background-size: 32px 32px;
+        background-image:
+            linear-gradient(to right, #bbe3e3 1px, transparent 1px),
+            linear-gradient(to bottom, #bbe3e3 1px, transparent 1px);
+    }
+
+    @media (max-width: 960px) {
+        .page {
+            border-left: none;
+            border-right: none;
+        }
     }
 </style>
