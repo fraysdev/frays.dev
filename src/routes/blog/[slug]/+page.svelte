@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-    <title>{data.meta.title} — Blocs Frays.dev</title>
+    <title>{data.meta.title} — BLOCS Frays.dev</title>
 </svelte:head>
 
 <BlogSidebar current={data.slug} />

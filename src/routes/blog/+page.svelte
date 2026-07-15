@@ -5,6 +5,10 @@
     let { data }: { data: PageData } = $props();
 </script>
 
+<svelte:head>
+    <title>Blog — BLOCS Frays.dev</title>
+</svelte:head>
+
 <Content>
     <div class="title">
         <h1>BLOCS: Blog</h1>

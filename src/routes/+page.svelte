@@ -2,6 +2,10 @@
     import Content from "$lib/components/Content.svelte"
 </script>
 
+<svelte:head>
+    <title>Home — Frays.dev</title>
+</svelte:head>
+
 <Content>
     <div class="intro-wrapper">
         <div class="intro">
