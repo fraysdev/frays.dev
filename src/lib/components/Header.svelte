@@ -1,9 +1,12 @@
 <script lang="ts">
     import { page } from '$app/state';
-    const url = page.url.pathname === "/" ? "" : window.location.pathname
+    import ThemeToggle from './ThemeToggle.svelte';
+
+    const urlPath = $derived(page.url.pathname === "/" ? "" : page.url.pathname);
 
     const links = [
       { label: "home", href: "/" },
+      { label: "blog", href: "/blog" },
       { label: "contact", href: "/contact" },
     ]
 </script>
@@ -24,9 +27,10 @@
                 {/each}
             </ul>
         </nav>
+        <ThemeToggle />
     </div>
     <div class="shell">
-        franky@frays.dev:~{url}$ <span class="cursor">_</span>
+        franky@frays.dev:~{urlPath}$ <span class="cursor">_</span>
     </div>
 </header>
 
@@ -35,26 +39,11 @@
         border-bottom: 1px dashed var(--color-border);
     }
 
-    .shell {
-        background-color: var(--color-bg-muted);
-        padding: 4px 8px;
-
-        font-family: var(--font-mono);
-        font-size: .9rem;
-    }
-
-    .cursor {
-        animation: blink 1s step(1) infinite;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
     .links {
         display: flex;
         align-items: center;
         padding-right: 8px;
+        gap: 8px;
     }
 
     .links .fill {
@@ -79,19 +68,11 @@
     }
 
     .website .logo img {
-        width: 1rem;
-        height: 1rem;
+        width: 20px;
+        height: 20px;
     }
 
     .website .name {
-        /*background: var(--color-primary);
-        background: linear-gradient(
-            45deg,
-            var(--color-primary-muted)   0%,
-            var(--color-secondary-muted) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;*/
         padding: 8px;
 
         font-family: var(--font-mono);
@@ -110,12 +91,28 @@
     nav a {
         font-family: var(--font-mono);
         color: var(--color-text);
-        transition: color 0.15s ease;
+        transition: color var(--transition-fast);
         text-decoration: none;
     }
 
     nav a:hover,
     nav a:focus-visible {
-        color: var(--color-secondary-muted);
+        color: var(--color-link-hover);
+    }
+
+    .shell {
+        background-color: var(--color-bg-muted);
+        padding: 4px 8px;
+
+        font-family: var(--font-mono);
+        font-size: .9rem;
+    }
+
+    .cursor {
+        animation: blink 1s step(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
     }
 </style>

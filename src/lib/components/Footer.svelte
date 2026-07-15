@@ -67,11 +67,11 @@
         font-size: .9rem;
         color: var(--color-text);
         text-decoration: none;
-        transition: color 0.15s ease;
+        transition: color var(--transition-fast);
     }
 
     nav a:hover,
     nav a:focus-visible {
-        color: var(--color-secondary-muted);
+        color: var(--color-link-hover);
     }
 </style>

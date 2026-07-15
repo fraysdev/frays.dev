@@ -1,37 +1,87 @@
 :root {
+    color-scheme: light dark;
     --font-display: "Fraunces", serif;
     --font-sans: "Fredoka", system-ui, sans-serif;
     --font-mono: "Input Mono", monospace;
 
-    --color-primary: #77c7c7;
-    --color-primary-light: #e4f4f4;
-    --color-primary-muted: #5f9f9f;
-    --color-primary-hover: #3c6464;
-    --color-secondary: #c77777;
-    --color-secondary-light: #e3bbbb;
-    --color-secondary-muted: #8b5353;
-    --color-secondary-hover: #643c3c;
+    --color-teal-90:  #f1f9f9;
+    --color-teal-80:  #e4f4f4;
+    --color-teal-70:  #d6eeee;
+    --color-teal-60:  #c9e9e9;
+    --color-teal-50:  #bbe3e3;
+    --color-teal-40:  #addddd;
+    --color-teal-30:  #a0d8d8;
+    --color-teal-20:  #92d2d2;
+    --color-teal-10:  #85cdcd;
+    --color-teal:     #77c7c7;
+    --color-teal-100: #6bb3b3;
+    --color-teal-200: #5f9f9f;
+    --color-teal-300: #538b8b;
+    --color-teal-400: #477777;
+    --color-teal-500: #3c6464;
+    --color-teal-600: #305050;
+    --color-teal-700: #243c3c;
+    --color-teal-800: #182828;
+    --color-teal-900: #0c1414;
 
-    --color-bg: #f4f5f5;
-    --color-bg-muted: var(--color-primary-light);
-    --color-surface: #ffffff;
-    --color-surface-hover: #f0eeeb;
-    --color-surface-raised: #ffffff;
-    --color-border: #243c3c;
-    --color-border-light: #eeebe7;
+    --color-rose-90:  #f9f1f1;
+    --color-rose-80:  #f4e4e4;
+    --color-rose-70:  #eed6d6;
+    --color-rose-60:  #e9c9c9;
+    --color-rose-50:  #e3bbbb;
+    --color-rose-40:  #ddadad;
+    --color-rose-30:  #d8a0a0;
+    --color-rose-20:  #d29292;
+    --color-rose-10:  #cd8585;
+    --color-rose:     #c77777;
+    --color-rose-100: #b36b6b;
+    --color-rose-200: #9f5f5f;
+    --color-rose-300: #8b5353;
+    --color-rose-400: #774747;
+    --color-rose-500: #643c3c;
+    --color-rose-600: #503030;
+    --color-rose-700: #3c2424;
+    --color-rose-800: #281818;
+    --color-rose-900: #140c0c;
 
-    --color-text: #24211f;
+    --color-accent: light-dark(#77c7c7, #c77777);
+    --color-bg: light-dark(#f4f5f5, #1f1e1e);
+    --color-bg-muted: light-dark(#e4f4f4, #3c2424);
+    --color-bg-muted-alt: light-dark(#f4e4e4, #243c3c);
+    --color-surface: light-dark(#ffffff, #000000);
+    --color-surface-hover: light-dark(#f0eeeb, #24211f);
+    --color-surface-raised: light-dark(#ffffff, #000000);
+    --color-border: light-dark(#243c3c, #eed6d6);
+    --color-border-alt: light-dark(#bbe3e3, #643c3c);
+    --color-border-light: light-dark(#eed6d6, #243c3c);
+
+    --color-text: light-dark(#24211f, #f0eeeb);
+    --color-text-accent: light-dark(#538b8b, #d8a0a0);
+    --color-text-accent-hover: light-dark(#3c6464, #e3bbbb);
+    --color-text-accent-hover-alt: light-dark(#643c3c, #bbe3e3);
     --color-text-muted: #7a7470;
     --color-text-dim: #9a9490;
 
     --color-heading: var(--color-text);
-    --color-link: var(--color-primary);
-    --color-link-hover: var(--color-primary-hover);
-    --color-code-bg: #f0eeeb;
-    --color-inline-code-bg: var(--color-primary-muted);
-    --color-blockquote-bg: var(--color-secondary-muted);
-    --color-selection: rgba(199, 119, 119, 0.2);
-    --color-blockquote-border: var(--color-secondary);
+    --color-heading-anchor: var(--color-text-accent);
+    --color-link: var(--color-text-accent);
+    --color-link-hover: var(--color-text-accent-hover);
+    --color-link-hover-alt: var(--color-text-accent-hover-alt);
+
+    --color-code: var(--color-text-accent);
+    --color-code-bg: var(--color-bg-muted);
+    --color-inline-code: var(--color-text-accent);
+    --color-inline-code-bg: var(--color-bg-muted);
+
+    --color-blockquote-bg: var(--color-bg-muted);
+    --color-blockquote-border: var(--color-accent);
+
+    --color-table-header: light-dark(#c9e9e9, #643c3c);
+    --color-table-hover: light-dark(#d6eeee, #503030);
+    --color-table-banded: light-dark(#e4f4f4, #3c2424);
+    --color-table-banded-alt: light-dark(#f1f9f9, #281818);
+
+    --color-selection: light-dark(#d6eeee, #503030);
     --color-hr: var(--color-border);
 
     --gradient-accent: linear-gradient(
@@ -40,11 +90,9 @@
         var(--color-secondary)
     );
 
-    --navbar-h: 56px;
-    --mobile-bar-h: 48px;
-    --sidebar-w: 300px;
-    --toc-w: 300px;
-    --content-max: 1500px;
+    --content-width: 960px;
+    --sidebar-width: 160px;
+    --content-gap: 16px;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -56,38 +104,30 @@
     --transition-normal: 200ms ease;
 }
 
-[data-theme="dark"] {
-    --color-bg: #f5f3f0;
-    --color-surface: #ffffff;
-    --color-surface-hover: #f0eeeb;
-    --color-surface-raised: #ffffff;
-    --color-border: #e2ded9;
-    --color-border-light: #eeebe7;
+:root[data-theme="light"] {
+    color-scheme: light;
+}
 
-    --color-text: #24211f;
-    --color-text-muted: #7a7470;
-    --color-text-dim: #9a9490;
-
-    --color-primary: #c77777;
-    --color-primary-hover: #b06565;
-    --color-primary-muted: rgba(199, 119, 119, 0.08);
-    --color-secondary: #5bb5b5;
-    --color-secondary-hover: #4a9e9e;
-    --color-secondary-muted: rgba(91, 181, 181, 0.08);
-
-    --color-code-bg: #f0eeeb;
-    --color-inline-code-bg: var(--color-primary-muted);
-    --color-blockquote-bg: var(--color-secondary-muted);
-    --color-selection: rgba(199, 119, 119, 0.2);
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+:root[data-theme="dark"] {
+    color-scheme: dark;
 }
 
 * {
     font-family: var(--font-sans);
+    color: var(--color-text);
     margin: 0;
+}
+
+::selection {
+    background-color: var(--color-selection);
+}
+
+body {
+    background-color: var(--color-bg);
+    background-size: 32px 32px;
+    background-image:
+        linear-gradient(to right, var(--color-border-alt) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--color-border-alt) 1px, transparent 1px);
 }
 
 .content h1,
@@ -97,19 +137,19 @@
 .content h5,
 .content h6 {
     font-family: var(--font-display);
-    margin: .4rem 0;
+    margin-bottom: .4rem;
 }
 
 .content p {
-    margin: .6rem 0;
+    margin-bottom: .6rem;
 }
 
 .content a {
     text-decoration: none;
-    color: var(--color-primary-muted)
+    color: var(--color-link)
 }
 
 .content a:hover,
 .content a:focus-visible {
-    color: var(--color-primary-hover)
+    color: var(--color-link-hover)
 }
