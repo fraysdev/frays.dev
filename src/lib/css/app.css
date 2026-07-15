@@ -58,7 +58,7 @@
     --color-text: light-dark(#24211f, #f0eeeb);
     --color-text-accent: light-dark(#538b8b, #d8a0a0);
     --color-text-accent-hover: light-dark(#3c6464, #e3bbbb);
-    --color-text-accent-hover-alt: light-dark(#643c3c, #bbe3e3);
+    --color-text-accent-hover-alt: light-dark(#774747, #bbe3e3);
     --color-text-muted: #7a7470;
     --color-text-dim: #9a9490;
 
@@ -91,8 +91,11 @@
     );
 
     --content-width: 960px;
-    --sidebar-width: 240px;
-    --content-gap: 16px;
+    --sidebar-height: 640px;
+    --sidebar-width: 320px;
+    --sidebar-min: 200px;
+    --sidebar-padding: 16px;
+    --sidebar-media-breakpoint: 1440px;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
