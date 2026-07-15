@@ -12,20 +12,20 @@
 <style>
     .layout {
         display: grid;
-        grid-template-columns: var(--sidebar-width) min(var(--content-width), 100%) var(--sidebar-width);
+        grid-template-columns: 1fr var(--sidebar-width) min(var(--content-width), 100%) var(--sidebar-width) 1fr;
         column-gap: var(--content-gap);
         margin: 16px auto;
     }
 
     .layout :global(.sidebar-left) {
-        grid-column: 1;
-    }
-
-    .layout :global(.page-content) {
         grid-column: 2;
     }
 
-    .layout :global(.sidebar-left) {
+    .layout :global(.page-content) {
         grid-column: 3;
+    }
+
+    .layout :global(.sidebar-left) {
+        grid-column: 4;
     }
 </style>
