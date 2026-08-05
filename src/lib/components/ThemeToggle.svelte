@@ -44,21 +44,3 @@
 <button onclick={toggleTheme} title="Change theme. Shift+click to reset to system preference.">
     {themeText}
 </button>
-
-<style>
-    button {
-        background-color: transparent;
-        border: 1px solid var(--color-border-alt);
-        padding: 1px 4px 0;
-
-        font-family: var(--font-mono);
-        font-size: 1em;
-        color: var(--color-text);
-        transition: color var(--transition-fast);
-    }
-
-    button:hover,
-    button:focus-visible {
-        color: var(--color-link-hover);
-    }
-</style>

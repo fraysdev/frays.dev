@@ -24,12 +24,14 @@
 
 <style>
     footer {
-        border-top: 1px dashed var(--color-border);
+        border: 1px solid var(--color-border);
+        background-color: var(--color-bg);
         display: flex;
         align-items: center;
     }
 
     .copyright {
+        /*border-top: 1px dashed var(--color-border);*/
         padding: 4px 8px;
         flex: 1;
     }
@@ -45,7 +47,7 @@
     }
 
     .links {
-        border-left: 1px solid var(--color-border);
+        border-left: 1px dashed var(--color-border);
         padding: 4px 8px;
     }
 
@@ -73,5 +75,12 @@
     nav a:hover,
     nav a:focus-visible {
         color: var(--color-link-hover);
+    }
+
+    @media (max-width: 960px) {
+        footer {
+            border-left: 0;
+            border-right: 0;
+        }
     }
 </style>

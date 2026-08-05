@@ -133,6 +133,22 @@ body {
         linear-gradient(to bottom, var(--color-border-alt) 1px, transparent 1px);
 }
 
+button {
+    background-color: transparent;
+    border: 1px solid var(--color-border-alt);
+    padding: 1px 4px 0;
+
+    font-family: var(--font-mono);
+    font-size: 1em;
+    color: var(--color-text);
+    transition: color var(--transition-fast);
+}
+
+button:hover,
+button:focus-visible {
+    color: var(--color-link-hover);
+}
+
 .content h1,
 .content h2,
 .content h3,

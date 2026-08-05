@@ -36,11 +36,13 @@
 
 <style>
     header {
-        border-bottom: 1px dashed var(--color-border);
+        border: 1px solid var(--color-border);
+        background-color: var(--color-bg);
     }
 
     .links {
         display: flex;
+        border-bottom: 1px dashed var(--color-border);
         align-items: center;
         padding-right: 8px;
         gap: 8px;
@@ -114,5 +116,12 @@
 
     @keyframes blink {
       50% { opacity: 0; }
+    }
+
+    @media (max-width: 960px) {
+        header {
+            border-left: 0;
+            border-right: 0;
+        }
     }
 </style>

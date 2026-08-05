@@ -22,7 +22,7 @@
     }
 
     .layout :global(.sidebar-left) {
-        padding: 0 var(--sidebar-padding);
+        margin: 0 var(--sidebar-padding);
         grid-column: 2;
         grid-row: 1;
     }
@@ -33,7 +33,7 @@
     }
 
     .layout :global(.sidebar-right) {
-        padding: 0 var(--sidebar-padding);
+        margin: 0 var(--sidebar-padding);
         grid-column: 4;
         grid-row: 1;
     }
@@ -46,7 +46,7 @@
         }
 
         .layout :global(.sidebar-left) {
-            padding: 0;
+            display: none;
         }
 
         .layout :global(.page-content) {
@@ -54,7 +54,7 @@
         }
 
         .layout :global(.sidebar-right) {
-            padding: 0;
+            display: none;
         }
     }
 </style>

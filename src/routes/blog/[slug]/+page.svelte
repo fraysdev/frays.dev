@@ -1,9 +1,8 @@
 <script lang="ts">
+    import "$lib/css/post.css";
     import type { PageData } from "./$types";
     import Content from "$lib/components/Content.svelte";
-    import "$lib/css/post.css";
-    import TableOfContents from "$lib/components/TableOfContents.svelte";
-    import BlogSidebar from "$lib/components/BlogSidebar.svelte";
+    import ContentBar from "$lib/components/blocs/ContentBar.svelte";
 
     let { data }: { data: PageData } = $props();
 </script>
@@ -12,7 +11,6 @@
     <title>{data.meta.title} — BLOCS Frays.dev</title>
 </svelte:head>
 
-<BlogSidebar current={data.slug} />
 <Content>
     <article>
         <header class="post-header">
@@ -32,7 +30,7 @@
         </div>
     </article>
 </Content>
-<TableOfContents toc={data.toc} />
+<ContentBar currentPage={data.slug} toc={data.toc} />
 
 <style>
     .post-header {

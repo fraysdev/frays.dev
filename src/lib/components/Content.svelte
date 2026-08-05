@@ -13,8 +13,16 @@
 </div>
 
 <style>
-    .page-content {
-        border: 1px solid var(--color-border);
+    .content {
         background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        margin: 16px 0;
+    }
+
+    @media (max-width: 960px) {
+        .content {
+            border-left: 0;
+            border-right: 0;
+        }
     }
 </style>
